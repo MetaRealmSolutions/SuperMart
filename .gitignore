@@ -41,3 +41,11 @@ example
 # generated native folders
 /ios
 /android
+
+# SuperMart
+data/
+*.db
+*.db-wal
+*.db-shm
+.env
+.claude/

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "ShoppingMart",
-    "slug": "ShoppingMart",
+    "name": "SuperMart",
+    "slug": "supermart",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "shoppingmart",
+    "scheme": "supermart",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -20,8 +20,9 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
     },
     "plugins": [
       "expo-router",

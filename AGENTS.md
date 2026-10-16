@@ -1,4 +1,4 @@
-This is an Expo/React Native mobile application. Prioritize mobile-first patterns, performance, and cross-platform compatibility.
+This is an Expo (React Native Web) + Node/SQLite desktop-first retail application (see docs/ARCHITECTURE.md). Prioritize desktop/keyboard/barcode-scanner workflows; keep business logic in server/ and shared/.
 
 ## Expo has changed — do not trust your training data
 
