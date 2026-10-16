@@ -2,10 +2,14 @@ import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import m001 from './migrations/001_core';
+import m002 from './migrations/002_business_date';
 
 export type DB = Database.Database;
 
-export const MIGRATIONS: { id: string; sql: string }[] = [{ id: '001_core', sql: m001 }];
+export const MIGRATIONS: { id: string; sql: string }[] = [
+  { id: '001_core', sql: m001 },
+  { id: '002_business_date', sql: m002 },
+];
 
 export function runMigrations(db: DB, list = MIGRATIONS): string[] {
   db.exec('CREATE TABLE IF NOT EXISTS schema_migrations (id TEXT PRIMARY KEY, applied_at TEXT NOT NULL)');

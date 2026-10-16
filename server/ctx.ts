@@ -30,8 +30,20 @@ export class Ctx {
     return this.app.now().toISOString();
   }
 
+  /** Store-local calendar date (YYYY-MM-DD), using the configured UTC offset (default +05:30). */
+  localDate(at: Date = this.app.now()): string {
+    const offset = Number(this.setting('utc_offset_minutes', '330'));
+    return new Date(at.getTime() + offset * 60000).toISOString().slice(0, 10);
+  }
+
+  /** Store-local HH:MM. */
+  localTime(at: Date = this.app.now()): string {
+    const offset = Number(this.setting('utc_offset_minutes', '330'));
+    return new Date(at.getTime() + offset * 60000).toISOString().slice(11, 16);
+  }
+
   today(): string {
-    return this.ts().slice(0, 10);
+    return this.localDate();
   }
 
   enabledModules(): Set<ModuleId> {
