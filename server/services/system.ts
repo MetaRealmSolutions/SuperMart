@@ -68,6 +68,7 @@ export const SETTING_KEYS = [
   'max_cashier_discount_pct',
   'currency',
   'tax_label',
+  'utc_offset_minutes',
 ] as const;
 
 define('settings.get', {

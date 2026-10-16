@@ -170,6 +170,7 @@ export function seedDemo(app: App, opts: SeedOptions = {}): void {
       printer_name: 'Browser print dialog',
       max_cashier_discount_pct: '10',
       currency: 'INR',
+      utc_offset_minutes: '330',
       tax_label: 'GST (included in price)',
     };
     for (const [k, v] of Object.entries(defaults)) setting.run(k, v);
@@ -216,7 +217,6 @@ export function seedDemo(app: App, opts: SeedOptions = {}): void {
         ).lastInsertRowid,
       );
       if (p.barcode) bc.run(p.barcode, id);
-      bc.run(`SKU:${p.sku}`, id);
       const put = (locationId: number, units: number, batchNo?: string) => {
         if (units <= 0) return;
         let batchId = 0;

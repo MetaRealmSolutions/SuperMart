@@ -2,3 +2,8 @@
 import './auth';
 import './system';
 import './demo';
+import './catalog';
+import './stock';
+import './pos';
+import './reports';
+import './seedHistory';
